@@ -5,6 +5,35 @@ systemctl enable docker --now
 containerd config default > /etc/containerd/config.toml
 sed -i 's/SystemdCgroup = false/SystemdCgroup = true/' /etc/containerd/config.toml 
 sed -i 's/registry.k8s.io\/pause:3.8/registry.aliyuncs.com\/google_containers\/pause:3.10/' /etc/containerd/config.toml 
+sed -i '162s/.*/      config_path = "\/etc\/containerd\/certs.d"/' /etc/containerd/config.toml
+
+mkdir -p /etc/containerd/certs.d/docker.io
+cat << EOF | sudo tee /etc/containerd/certs.d/docker.io/hosts.toml 
+server = "https://docker.io"
+
+[host."https://dockerproxy.com"]
+  capabilities = ["pull", "resolve"]
+
+[host."https://docker.m.daocloud.io"]
+  capabilities = ["pull", "resolve"]
+
+[host."https://reg-mirror.qiniu.com"]
+  capabilities = ["pull", "resolve"]
+
+[host."https://registry.docker-cn.com"]
+  capabilities = ["pull", "resolve"]
+
+[host."http://hub-mirror.c.163.com"]
+  capabilities = ["pull", "resolve"]
+EOF
+
+mkdir -p /etc/containerd/certs.d/registry.k8s.io
+cat << EOF | tee /etc/containerd/certs.d/registry.k8s.io/hosts.toml 
+server = "https://registry.k8s.io"
+
+[host."https://k8s.m.daocloud.io"]
+  capabilities = ["pull", "resolve"]
+EOF
 systemctl restart containerd
 docker version
 echo  "---------------- docker 安装完毕 ---------------"
@@ -20,7 +49,7 @@ EOF
 yum install -y kubelet kubeadm kubectl
 systemctl enable kubelet --now
 systemctl disable firewalld --now
-cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
+cat << EOF | sudo tee /etc/sysctl.d/k8s.conf
 net.ipv4.ip_forward = 1
 EOF
 sudo sysctl --system
