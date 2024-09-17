@@ -5,7 +5,10 @@ systemctl enable docker --now
 cat << EOF > /etc/docker/daemon.json
 {
     "exec-opts": ["native.cgroupdriver=systemd"],
-    "registry-mirrors": ["https://dockerproxy.cn"]
+    "registry-mirrors": [
+      "https://dockerproxy.cn",
+      "k8s.m.daocloud.io"
+    ]
 }
 EOF
 docker version
