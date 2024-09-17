@@ -71,6 +71,8 @@ do
     read user_input
     case $user_input in
         1)
+            echo "k8s-masterer-01" > /etc/hostname
+            hostnamectl set-hostname k8s-masterer-01
             kubeadm init --pod-network-cidr=10.244.0.0/16 --image-repository registry.aliyuncs.com/google_containers
             mkdir -p $HOME/.kube
             sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
@@ -81,13 +83,13 @@ do
             break
             ;;
         2)
-            echo "ucn-worker-01" > /etc/hostname
-            hostnamectl set-hostname ucn-worker-01
+            echo "k8s-worker-01" > /etc/hostname
+            hostnamectl set-hostname k8s-worker-01
             break
             ;;
         3)
-            echo "ucn-worker-02" > /etc/hostname
-            hostnamectl set-hostname ucn-worker-02
+            echo "k8s-worker-02" > /etc/hostname
+            hostnamectl set-hostname k8s-worker-02
             break
             ;;
         *)
