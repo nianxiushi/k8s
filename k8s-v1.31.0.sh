@@ -71,8 +71,8 @@ do
     read user_input
     case $user_input in
         1)
-            echo "k8s-masterer-01" > /etc/hostname
-            hostnamectl set-hostname k8s-masterer-01
+            echo "k8s-master-01" > /etc/hostname
+            hostnamectl set-hostname k8s-master-01
             kubeadm init --pod-network-cidr=10.244.0.0/16 --image-repository registry.aliyuncs.com/google_containers
             mkdir -p $HOME/.kube
             sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
