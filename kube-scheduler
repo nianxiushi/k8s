@@ -1,105 +1,108 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" version="24.7.13">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.7.13">
   <diagram name="第 1 页" id="8J_ypIUxbjQtIbSlb3ZD">
-    <mxGraphModel dx="1363" dy="846" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1193" dy="740" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="-SyxFA2cnBJX_qCz__s2-1" target="-SyxFA2cnBJX_qCz__s2-2">
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="-SyxFA2cnBJX_qCz__s2-1" target="-SyxFA2cnBJX_qCz__s2-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-1" value="用户" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-1" value="用户" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="40" y="220" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1">
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="440" y="280" as="sourcePoint" />
             <mxPoint x="870" y="280" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1">
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="400" y="510" as="targetPoint" />
             <mxPoint x="400" y="320" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-SyxFA2cnBJX_qCz__s2-2">
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="-SyxFA2cnBJX_qCz__s2-2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="380" y="510" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-2" value="api-server" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-2" value="api-server" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="320" y="200" width="120" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="870" y="244.5" as="sourcePoint" />
             <mxPoint x="440" y="244.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-SyxFA2cnBJX_qCz__s2-3">
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="-SyxFA2cnBJX_qCz__s2-3" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="930" y="390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-3" value="controller-manager" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-3" value="controller-manager" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="870" y="200" width="120" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-4" value="etcd" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-4" value="etcd" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="360" y="520" width="120" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-SyxFA2cnBJX_qCz__s2-5">
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="-SyxFA2cnBJX_qCz__s2-5" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="430" y="330" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-5" value="kube-scheduler&amp;nbsp;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-5" value="kube-scheduler&amp;nbsp;" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="880" y="400" width="120" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-19" value="发送创建（create/apply）指令" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-19" value="发送创建（create/apply）指令" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="130" y="230" width="180" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-21" value="进行校验将数据存储到 etcd 中" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=90;" vertex="1" parent="1">
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-21" value="进行校验将数据存储到 etcd 中" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=90;" parent="1" vertex="1">
           <mxGeometry x="324" y="400" width="180" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-22" value="watch" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-22" value="watch" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="650" y="220" width="50" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-23" value="watch" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-23" value="watch" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="670" y="430" width="50" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-28" value="监听检测到有新的 Pod 对象时，控制器创建 Pod 并将其状态设为 Pending" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-28" value="监听检测到有新的 Pod 对象时，控制器创建 Pod 并将其状态设为 Pending" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="455" y="288" width="410" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-29" value="监听 Apiserver 发现有新的、尚未分配节点的 Pod，&lt;div&gt;根据预选策略和优选策略，&lt;/div&gt;&lt;div&gt;选择一个最适合的 Node 来运行新的 Pod&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-29" value="监听 Apiserver 发现有新的、尚未分配节点的 Pod，&lt;div&gt;根据预选策略和优选策略，&lt;/div&gt;&lt;div&gt;选择一个最适合的 Node 来运行新的 Pod&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="550" y="453" width="300" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-31" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="880" y="805" width="120" height="120" as="geometry" />
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-31" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="880" y="790" width="190" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-35" value="Node 上的 kubelet 组件则开始根据 Pod 配置文件&lt;div&gt;拉镜像、启动 app、就绪探针探测&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=90;" vertex="1" parent="1">
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-35" value="Node 上的 kubelet 组件则开始根据 Pod 配置文件&lt;div&gt;拉镜像、启动 app、就绪探针探测&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=90;" parent="1" vertex="1">
           <mxGeometry x="770" y="646" width="280" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-41" value="kubelet api-server&amp;nbsp; 上报状态为 ready" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-41" value="kubelet api-server&amp;nbsp; 上报状态为 ready" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="530" y="840" width="220" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="-SyxFA2cnBJX_qCz__s2-43">
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="-SyxFA2cnBJX_qCz__s2-43" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="330" y="330" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-43" value="kubelet" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="905" y="847.5" width="70" height="35" as="geometry" />
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-43" value="kubelet" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="905" y="847.5" width="45" height="32.5" as="geometry" />
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-44" value="&lt;span style=&quot;text-wrap: wrap;&quot;&gt;node&amp;nbsp;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="910" y="810" width="50" height="30" as="geometry" />
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-44" value="&lt;span style=&quot;text-wrap: wrap;&quot;&gt;node&amp;nbsp;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="960" y="760" width="50" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-52" value="apiserver 写入到 etcd 中" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=90;" vertex="1" parent="1">
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-52" value="apiserver 写入到 etcd 中" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=90;" parent="1" vertex="1">
           <mxGeometry x="290" y="395" width="150" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="-SyxFA2cnBJX_qCz__s2-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-SyxFA2cnBJX_qCz__s2-5">
+        <mxCell id="-SyxFA2cnBJX_qCz__s2-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="-SyxFA2cnBJX_qCz__s2-5" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="940" y="790" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="PF3RZL1F1SNObaRAQR6T-2" value="kube-proxy" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="980" y="847.5" width="70" height="32.5" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
