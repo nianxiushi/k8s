@@ -118,9 +118,10 @@ do
             kubectl get node
             mkdir -p /opt/k8s/istio 
             cd /opt/k8s/istio
-            curl -L https://istio.io/downloadIstio | sh 
+            wget https://github.com/istio/istio/releases/download/1.23.2/istio-1.23.2-linux-amd64.tar.gz
+            tar -xzf istio-1.23.2-linux-amd64.tar.gz
             sed -i '$ a export PATH="$PATH:/opt/k8s/istio/istio-1.23.2/bin"' ~/.bashrc
-            source ~/.bashrc
+            export PATH="$PATH:/opt/k8s/istio/istio-1.23.2/bin"
             istioctl profile list
             istioctl install --set profile=demo -y
             #istioctl manifest apply --set components.cni.enabled=true 
