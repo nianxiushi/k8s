@@ -120,6 +120,7 @@ do
             cd /opt/k8s/istio
             curl -L https://istio.io/downloadIstio | sh -
             echo 'export PATH="$PATH:/opt/k8s/istio/istio-1.23.2/bin"' >> ~/.bashrc
+            source ~/.bashrc
             istioctl profile list
             istioctl install --set profile=demo -y
             #istioctl manifest apply --set components.cni.enabled=true 
