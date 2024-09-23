@@ -116,13 +116,13 @@ do
             export KUBECONFIG=/etc/kubernetes/admin.conf
             kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
             echo  "----------------请确认所有node已加入master，开始安装istio---------------"
-            kubectl get node
             mkdir -p /opt/k8s/istio 
             cd /opt/k8s/istio
             wget https://github.com/istio/istio/releases/download/1.23.2/istio-1.23.2-linux-amd64.tar.gz
             tar -xzf istio-1.23.2-linux-amd64.tar.gz
             sed -i '$ a export PATH="$PATH:/opt/k8s/istio/istio-1.23.2/bin"' ~/.bashrc
             export PATH="$PATH:/opt/k8s/istio/istio-1.23.2/bin"
+            kubectl get node
             istioctl profile list
             istioctl install --set profile=demo -y
             #istioctl manifest apply --set components.cni.enabled=true 
