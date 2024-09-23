@@ -115,6 +115,7 @@ do
             sudo chown $(id -u):$(id -g) $HOME/.kube/config
             export KUBECONFIG=/etc/kubernetes/admin.conf
             kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+            echo  "----------------请确认所有node已加入master，开始安装istio---------------"
             kubectl get node
             mkdir -p /opt/k8s/istio 
             cd /opt/k8s/istio
