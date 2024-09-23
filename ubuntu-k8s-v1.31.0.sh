@@ -133,6 +133,7 @@ do
             kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml -n istio-injection
             kubectl get pods -n istio-injection
             kubectl get services -n istio-injection
+            source ~/.bashrc
             break
             ;;
         2)
