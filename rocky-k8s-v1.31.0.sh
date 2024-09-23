@@ -79,7 +79,24 @@ do
             sudo chown $(id -u):$(id -g) $HOME/.kube/config
             export KUBECONFIG=/etc/kubernetes/admin.conf
             kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+            echo  "----------------请确认所有node已加入master，开始安装istio---------------"
+            mkdir -p /opt/k8s/istio 
+            cd /opt/k8s/istio
+            curl -L https://istio.io/downloadIstio | sh -
+            sed -i '$ a export PATH="$PATH:/opt/k8s/istio/istio-1.23.2/bin"' ~/.bashrc
+            export PATH="$PATH:/opt/k8s/istio/istio-1.23.2/bin"
             kubectl get node
+            istioctl profile list
+            istioctl install --set profile=demo -y
+            istioctl manifest apply --set components.cni.enabled=true 
+            kubectl create ns istio-injection
+            kubectl label namespace istio-injection istio-injection=enabled
+            ls
+            cd /opt/k8s/istio/istio-1.23.2
+            kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml -n istio-injection
+            kubectl get pods -n istio-injection
+            kubectl get services -n istio-injection
+            source ~/.bashrc
             break
             ;;
         2)
