@@ -127,7 +127,7 @@ do
             #istioctl manifest apply --set components.cni.enabled=true 
             kubectl label namespace default istio-injection=enabled
             ls
-            cd istio-$(istioctl version | awk '{print $3;exit}')
+            cd /opt/k8s/istio/istio-1.23.2
             kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml
             kubectl get pods
             kubectl get services
