@@ -91,11 +91,13 @@ do
             istioctl manifest apply --set components.cni.enabled=true 
             kubectl create ns istio-injection
             kubectl label namespace istio-injection istio-injection=enabled
-            ls
             cd /opt/k8s/istio/istio-1.23.2
             kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml -n istio-injection
             kubectl get pods -n istio-injection
             kubectl get services -n istio-injection
+            kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml -n istio-injection
+            kubectl get gw,vs -n istio-injection
+            kubectl get svc -n istio-system
             source ~/.bashrc
             break
             ;;
