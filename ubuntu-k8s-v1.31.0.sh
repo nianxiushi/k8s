@@ -125,7 +125,7 @@ do
             kubectl get node
             istioctl profile list
             istioctl install --set profile=demo -y
-            #istioctl manifest apply --set components.cni.enabled=true 
+            istioctl manifest apply --set components.cni.enabled=true 
             kubectl create ns istio-injection
             kubectl label namespace istio-injection istio-injection=enabled
             ls
