@@ -6,3 +6,49 @@
 3、客户端接收到伪代码之后就会执行，客户端再把执行结果发送给服务器。
 
 4、服务器再把客户端的执行结果写入日志
+
+## 安装
+### Rocky Linux 9
+* 服务端
+```
+vi /etc/hosts
+192.168.52.129    ucn-master-01
+192.168.52.130    ucn-worker-01
+rpm -ivh https://yum.puppetlabs.com/puppet8-release-el-9.noarch.rpm
+yum install puppetserver -y
+vi ~/.bashrc 
+export PATH=$PATH:/opt/puppetlabs/bin/puppetserver
+source ~/.bashrc
+SELINUX=disabled
+vi /etc/selinux/config
+setenforce 0
+puppetserver ca list --all
+systemctl enable puppetserver --now
+```
+* 客户端
+```
+vi /etc/hosts
+192.168.52.129    ucn-master-01
+192.168.52.130    ucn-worker-01
+rpm -ivh https://yum.puppetlabs.com/puppet8-release-el-9.noarch.rpm
+yum install puppet-agent -y
+vi /etc/puppetlabs/puppet/puppet.conf 
+[main]
+    server = 192.168.52.129
+vi ~/.bashrc 
+export PATH=$PATH:/opt/puppetlabs/bin/puppet
+source ~/.bashrc
+systemctl enable puppet --now
+
+```
+### Ubuntu 24.04.1 LTS
+* 服务端
+```
+https://apt.puppetlabs.com/puppet-release-noble.deb
+apt install puppetserver -y
+```
+* 客户端
+```
+https://apt.puppetlabs.com/puppet-release-noble.deb
+apt install puppet-agent -y
+```
