@@ -136,6 +136,15 @@ do
             kubectl get gw,vs -n istio-injection
             kubectl get svc -n istio-system
             source ~/.bashrc
+            echo  "----------------kiali---------------"
+            kubectl apply -f samples/addons 
+            kubectl get po -n istio-system
+            kubectl get svc -n istio-system
+            kubectl get svc kiali -n istio-system -o yaml > kiali-svc.yaml
+            sed -i 's/type: ClusterIP/type: NodePort/' kiali-svc.yaml
+            kubectl apply -f kiali-svc.yaml -n istio-system
+            rm kiali-svc.yaml
+            kubectl get svc -n istio-system
             break
             ;;
         2)
