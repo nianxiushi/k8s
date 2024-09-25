@@ -29,6 +29,18 @@ cat << EOF >> /etc/puppetlabs/puppet/puppet.conf
 EOF
 systemctl enable puppetserver --now
 puppetserver ca list --all
+cat << EOF > /etc/puppetlabs/code/environments/production/manifests/site.pp 
+class myconfig {
+  file { '/tmp/test.txt':
+    ensure => present,
+    content => 'hell world',
+    mode   => '0644',
+  }
+}
+node default {
+  include myconfig
+}
+EOF
 ```
 * 客户端
 ```
