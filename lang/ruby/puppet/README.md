@@ -34,8 +34,8 @@ puppetserver ca list --all
 ```
 * 客户端
 ```
-echo "ucn-master-01" > /etc/hostname
-hostnamectl set-hostname ucn-master-01
+echo "ucn-worker-01" > /etc/hostname
+hostnamectl set-hostname ucn-worker-01
 echo '192.168.52.129    ucn-master-01' >> /etc/hosts
 echo '192.168.52.130    ucn-worker-01' >> /etc/hosts
 sed -i 's/^SELINUX=enforcing/SELINUX=disabled/'  /etc/selinux/config
