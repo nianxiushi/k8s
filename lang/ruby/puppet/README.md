@@ -17,16 +17,14 @@ echo '192.168.52.129    ucn-master-01' >> /etc/hosts
 echo '192.168.52.130    ucn-worker-01' >> /etc/hosts
 sed -i 's/^SELINUX=enforcing/SELINUX=disabled/'  /etc/selinux/config
 setenforce 0
+systemctl disable firewalld --now
 rpm -ivh https://yum.puppetlabs.com/puppet8-release-el-9.noarch.rpm
 yum install puppetserver -y
 echo 'export PATH=$PATH:/opt/puppetlabs/bin/puppetserver' >> ~/.bashrc 
 source ~/.bashrc
-cat << EOF >> /etc/puppetlabs/puppet/puppet.conf 
-[master]
-  # 证书名称
-  certname = ucn-master-01
-
-  # 是否自动签署证书请求
+cat << EOF >> /etc/puppetlabs/puppet/puppet.conf
+[main]
+  server = ucn-master-01
   autosign = true
 EOF
 systemctl enable puppetserver --now
@@ -40,12 +38,17 @@ echo '192.168.52.129    ucn-master-01' >> /etc/hosts
 echo '192.168.52.130    ucn-worker-01' >> /etc/hosts
 sed -i 's/^SELINUX=enforcing/SELINUX=disabled/'  /etc/selinux/config
 setenforce 0
+systemctl disable firewalld --now
 rpm -ivh https://yum.puppetlabs.com/puppet8-release-el-9.noarch.rpm
 yum install puppet-agent -y
 echo 'export PATH=$PATH:/opt/puppetlabs/bin/puppet' >> ~/.bashrc 
 source ~/.bashrc
+cat << EOF >> /etc/puppetlabs/puppet/puppet.conf
+[main]
+  server = ucn-master-01
+EOF
 systemctl enable puppet --now
-
+puppet agent -t
 ```
 ### Ubuntu 24.04.1 LTS
 * 服务端
