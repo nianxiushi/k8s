@@ -11,32 +11,38 @@
 ### Rocky Linux 9
 * 服务端
 ```
-vi /etc/hosts
-192.168.52.129    ucn-master-01
-192.168.52.130    ucn-worker-01
+echo "ucn-master-01" > /etc/hostname
+hostnamectl set-hostname ucn-master-01
+echo '192.168.52.129    ucn-master-01' >> /etc/hosts
+echo '192.168.52.130    ucn-worker-01' >> /etc/hosts
+sed -i 's/^SELINUX=enforcing/SELINUX=disabled/'  /etc/selinux/config
+setenforce 0
 rpm -ivh https://yum.puppetlabs.com/puppet8-release-el-9.noarch.rpm
 yum install puppetserver -y
-vi ~/.bashrc 
-export PATH=$PATH:/opt/puppetlabs/bin/puppetserver
+echo 'export PATH=$PATH:/opt/puppetlabs/bin/puppetserver' >> ~/.bashrc 
 source ~/.bashrc
-SELINUX=disabled
-vi /etc/selinux/config
-setenforce 0
-puppetserver ca list --all
+cat << EOF >> /etc/puppetlabs/puppet/puppet.conf 
+[master]
+  # 证书名称
+  certname = ucn-master-01
+
+  # 是否自动签署证书请求
+  autosign = true
+EOF
 systemctl enable puppetserver --now
+puppetserver ca list --all
 ```
 * 客户端
 ```
-vi /etc/hosts
-192.168.52.129    ucn-master-01
-192.168.52.130    ucn-worker-01
+echo "ucn-master-01" > /etc/hostname
+hostnamectl set-hostname ucn-master-01
+echo '192.168.52.129    ucn-master-01' >> /etc/hosts
+echo '192.168.52.130    ucn-worker-01' >> /etc/hosts
+sed -i 's/^SELINUX=enforcing/SELINUX=disabled/'  /etc/selinux/config
+setenforce 0
 rpm -ivh https://yum.puppetlabs.com/puppet8-release-el-9.noarch.rpm
 yum install puppet-agent -y
-vi /etc/puppetlabs/puppet/puppet.conf 
-[main]
-    server = 192.168.52.129
-vi ~/.bashrc 
-export PATH=$PATH:/opt/puppetlabs/bin/puppet
+echo 'export PATH=$PATH:/opt/puppetlabs/bin/puppet' >> ~/.bashrc 
 source ~/.bashrc
 systemctl enable puppet --now
 
