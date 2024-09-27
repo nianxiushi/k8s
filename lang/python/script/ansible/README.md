@@ -21,6 +21,23 @@ cat << EOF >> ping_test.yml
 EOF
 ansible-playbook ping_test.yml
 ```
+## playbook
+* vars 参数: 用于在执行playbook时传递变量
+```
+cat << EOF >> vars.yaml
+- name: 直接设置变量
+  hosts: all
+  gather_facts: no
+  
+  vars:
+    my_var: "Hello, Ansible!"
+
+  tasks:
+  - name: 打印变量
+    ansible.builtin.debug:
+      msg: "{{ my_var }}"
+EOF
+```
 ## 模块
 * set_fact 模块：用于在任务执行过程中动态地设置变量
 ```
